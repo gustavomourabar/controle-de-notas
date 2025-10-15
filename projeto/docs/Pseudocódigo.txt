@@ -1,0 +1,39 @@
+Início
+    // Bloco 1: Coleta de dados
+    Inicializar lista de alunos vazia
+    Perguntar: "Quantos alunos deseja cadastrar?"
+    Ler quantidade_alunos
+    
+    Para i de 1 até quantidade_alunos faça
+        Criar novo_aluno
+        Perguntar: "Nome do aluno:"
+        Ler novo_aluno.nome
+        Perguntar: "Nota 1:"
+        Ler novo_aluno.nota1
+        Perguntar: "Nota 2:"
+        Ler novo_aluno.nota2
+        
+        // Bloco 2: Processamento
+        Calcular média do aluno: 
+            novo_aluno.media = (novo_aluno.nota1 + novo_aluno.nota2) / 2
+        
+        // Decisão: Verificar situação do aluno
+        Se novo_aluno.media >= 6 então
+            novo_aluno.situacao = "Aprovado"
+        Senão
+            novo_aluno.situacao = "Reprovado"
+        FimSe
+        
+        Adicionar novo_aluno à lista de alunos
+    FimPara
+    
+    // Bloco 3: Exibição
+    Para cada aluno em lista de alunos faça
+        Exibir "Nome: " + aluno.nome
+        Exibir "Nota 1: " + aluno.nota1
+        Exibir "Nota 2: " + aluno.nota2
+        Exibir "Média: " + aluno.media
+        Exibir "Situação: " + aluno.situacao
+        Exibir "------------------------"
+    FimPara
+Fim
